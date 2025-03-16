@@ -1,2 +1,9 @@
+streamlit
+pandas
 joblib
 tensorflow
+numpy
+PIL
+
+
+
