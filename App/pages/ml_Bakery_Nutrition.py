@@ -39,3 +39,6 @@ def show():
     # Footer
     st.markdown("---")
     st.markdown("🚀 Developed with Streamlit & Machine Learning")
+
+
+show()

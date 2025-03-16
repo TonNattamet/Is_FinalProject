@@ -1,10 +1,10 @@
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
-from geopy.geocoders import Nominatim
-import tensorflow as tf
 import joblib
 import numpy as np
+import tensorflow as tf
+from geopy.geocoders import Nominatim  # ✅ Fix: Import added
 
 def show():
 
@@ -16,13 +16,12 @@ def show():
     scaler = joblib.load("model/lat_lng_scaler_final.pkl")
 
     # Initialize Geocoder
-    geolocator = Nominatim(user_agent="geoapi")
+    geolocator = Nominatim(user_agent="geoapi")  # ✅ Now this works!
 
     # UI Setup
-    
+    st.set_page_config(page_title="🚆 Bangkok Train AI", page_icon="🚇", layout="centered")
     st.title("🚆 Bangkok Train Line Predictor")
     st.markdown("### Select your location on the map or enter an address to predict the nearest train line.")
-    st.markdown("### Click BluePin in map to update 🌍 Latitude 📍 Longitude:")
 
     # Default Location: Bangkok
     default_location = [13.7563, 100.5018]
@@ -82,4 +81,4 @@ def show():
 
         st.success(f"🚇 Nearest Train Line: **{predicted_line}**")
 
-
+show()
