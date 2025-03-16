@@ -59,7 +59,3 @@ st.sidebar.title("📌 Navigation")
 choice = st.sidebar.radio("🔍 Select a Page:", list(PAGES.keys()))
 PAGES[choice]()  # Call the selected page function
 
-
-st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", list(PAGES.keys()))
-PAGES[choice]()
