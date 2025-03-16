@@ -1,8 +1,13 @@
-
-
-
-
 import streamlit as st
+
+# Set the page configuration (MUST be the first Streamlit command)
+st.set_page_config(
+    page_title="Welcome",
+    page_icon="❤️❤️❤️",
+    layout="wide"
+)
+
+# Import pages
 from pages.introduction import show as introduction
 from pages.explanation import show as explanation
 from pages.ml_ThaiFood import show as ml_ThaiFood
@@ -27,19 +32,6 @@ PAGES = {
 
 st.sidebar.title("📌 Navigation")
 choice = st.sidebar.radio("🔍 Select a Page:", list(PAGES.keys()))
+
+# Display selected page
 PAGES[choice]()  # Call the selected page function
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
