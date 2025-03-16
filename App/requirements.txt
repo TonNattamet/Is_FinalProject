@@ -1,7 +1,7 @@
 streamlit
-scipy==1.10.1
+scipy==1.11.3
 gensim==4.3.2
-tensorflow==2.19.0
+tensorflow
 scikit-learn
 numpy
 pandas
@@ -10,7 +10,4 @@ folium
 geopy
 streamlit-folium
 xgboost
-
-
-
 
