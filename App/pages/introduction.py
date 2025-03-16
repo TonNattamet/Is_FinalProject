@@ -4,17 +4,54 @@ def show():
     st.header("📊 Introduction & Data Preparation")
     
     st.markdown("""
-    ## Overview
-    This application demonstrates two machine learning models: 
-    1. **Baked Food Health Classifier** - Determines if a food is **Healthy or Unhealthy** based on nutritional values.
-    2. **Thai Dish Predictor** - Predicts a Thai dish based on provided ingredients using a Neural Network.
+    ## เนื้อหาภายในเว็บไซต์
+    - Introduction & Data Preparation.
+    - 1. Ml Bakery Health Classifier.
+    - 2. Ml Thai Dish Predictor.
+    - 3. NN LineTrain_Predict.
     
-    ## Data Collection & Preprocessing
-    - The data was collected from food databases and preprocessed to ensure consistency.
-    - Key features such as **calories, protein, carbohydrates, sugar, and fat** were selected for the classifier.
-    - Ingredient-based predictions utilize **Word2Vec embeddings** to transform text into numerical features.
+    ## ระบุที่มาของ Dataset
+    - **1. Ml Bakery Health Classifier:**  
+      [Kaggle Dataset](https://www.kaggle.com/datasets/sandeep1080/baked-food-nutritions-check-are-you-healthy)
+      
+    - **2. Ml Thai Dish Predictor:**  
+      [Kaggle Dataset](https://www.kaggle.com/datasets/ponthakornsodchun/foods-in-thailand)
+      
+    - **3. NN LineTrain_Predict:**  
+      [Kaggle Dataset](https://www.kaggle.com/datasets/gusbell/thailand-public-train-data-bangkok-area)
     
-    ## Feature Engineering
-    - The nutritional data is **normalized** using MinMaxScaler.
-    - Thai dish ingredients are converted into **vector embeddings** using Word2Vec.
+    ---
+
+    ## อธิบาย Feature ของแต่ละ Dataset
+
+    ### **1. Ml Bakery Health Classifier**
+    - **Feature:**
+      - `Calories-kcal` : จำนวนแคลอรี่ของขนมอบ
+      - `Protein-g` : ปริมาณโปรตีน (กรัม)
+      - `Carbohydrates-g` : ปริมาณคาร์โบไฮเดรต (กรัม)
+      - `Sugar-g` : ปริมาณน้ำตาล (กรัม)
+      - `SaturatedFat-g` : ปริมาณไขมันอิ่มตัว (กรัม)
+    - **AI ใช้ข้อมูลนี้เพื่อทำนาย:** ขนมอบนั้น **สุขภาพดีหรือไม่** 🥐✅❌
+    
+    ---
+
+    ### **2. Ml Thai Dish Predictor**
+    - **Feature:**
+      - `ingredients` : ส่วนผสมอาหาร (เช่น "Beef+lime juice+fish sauce")
+      - `th_name` : ชื่ออาหารในภาษาไทย
+    - **AI ใช้ข้อมูลนี้เพื่อทำนาย:** ชื่อเมนูอาหารไทยจากวัตถุดิบที่ป้อนเข้า 🍜🇹🇭
+
+    ---
+
+    ### **3. NN LineTrain_Predict**
+    - **Feature:**
+      - `stationId` : รหัสสถานี
+      - `nameEng` : ชื่อสถานี (อังกฤษ)
+      - `geoLat` / `geoLng` : ตำแหน่งพิกัดของสถานี (ละติจูด / ลองจิจูด)
+      - `lineNameEng` : ชื่อสายรถไฟ (เช่น **BTS Sukhumvit Line**)
+      - `lineColorHex` : สีของสายรถไฟ
+      - `lineServiceName` : ประเภทของบริการ (เช่น **BTS, MRT, SRT, ARL**)
+    - **AI ใช้ข้อมูลนี้เพื่อทำนาย:** เส้นทางรถไฟที่ใกล้ที่สุดจากตำแหน่งที่เลือกบนแผนที่ 🚆📍
+    
+    ---
     """)

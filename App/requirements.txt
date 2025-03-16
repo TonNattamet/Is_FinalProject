@@ -8,6 +8,8 @@ matplotlib
 xgboost
 gensim
 
+
+streamlit-folium
 scikit-learn
 
 
