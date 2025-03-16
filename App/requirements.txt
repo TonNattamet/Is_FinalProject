@@ -3,7 +3,7 @@ pandas
 joblib
 tensorflow
 numpy
-PIL
+
 
 
 
