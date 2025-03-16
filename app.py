@@ -1,6 +1,14 @@
 
-
 import streamlit as st
+
+# Set Page Configuration (MUST be the first Streamlit command)
+st.set_page_config(
+    page_title="Welcome",
+    page_icon="🍜",
+    layout="wide"
+)
+
+# Import Pages
 from pages.introduction import show as introduction
 from pages.explanation import show as explanation
 from pages.ml_ThaiFood import show as ml_ThaiFood
@@ -14,18 +22,31 @@ st.sidebar.markdown("**อาจารย์ผู้สอน:** ดร.ณั�
 st.sidebar.markdown("**มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ**")
 st.sidebar.markdown("**ภาควิชาวิทยาการคอมพิวเตอร์และสารสนเทศ**")
 
-# # Page Navigation
-# PAGES = {
-#     "📊 Introduction": introduction,
-#     "📖 ML & NN Explanation": explanation,
-#     "🍜 ML Thai Dish Predictor": ml_ThaiFood,
-#     "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
-#     "🚆 NN Train Line Predictor": nn_LineTrain_Predict
-# }
+# Sidebar Navigation
+st.sidebar.title("📌 Navigation")
+choice = st.sidebar.radio("🔍 Select a Page:", [
+    "📊 Introduction",
+    "📖 Explanation",
+    "🍜 ML Thai Dish Predictor",
+    "🥐 ML Bakery Health Classifier",
+    "🚆 NN Train Line Predictor"
+])
 
-# st.sidebar.title("📌 Navigation")
-# choice = st.sidebar.radio("🔍 Select a Page:", list(PAGES.keys()))
-# PAGES[choice]()  # Call the selected page function
+# Page Routing Using If-Else
+if choice == "📊 Introduction":
+    introduction()
+
+elif choice == "📖 Explanation":
+    explanation()
+
+elif choice == "🍜 ML Thai Dish Predictor":
+    ml_ThaiFood()
+
+elif choice == "🥐 ML Bakery Health Classifier":
+    ml_Bakery_Nutrition()
+
+elif choice == "🚆 NN Train Line Predictor":
+    nn_LineTrain_Predict()
 
 
 

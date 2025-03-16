@@ -22,6 +22,7 @@ def show():
     
     st.title("🚆 Bangkok Train Line Predictor")
     st.markdown("### Select your location on the map or enter an address to predict the nearest train line.")
+    st.markdown("### กดที่ Blue Pin อีกครั้งหลังจากเปลี่ยนตําแหน่ง เพื่อรีเซตค่า 🌍 Latitude 📍 Longitude")
 
     # Default Location: Bangkok
     default_location = [13.7563, 100.5018]
