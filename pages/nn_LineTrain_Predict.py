@@ -18,8 +18,7 @@ def show():
     # Initialize Geocoder
     geolocator = Nominatim(user_agent="geoapi")  # ✅ Now this works!
 
-    # UI Setupasdasd
-    
+    # UI Setupasdas
     st.title("🚆 Bangkok Train Line Predictor")
     st.markdown("### Select your location on the map or enter an address to predict the nearest train line.")
     st.markdown("### กดที่ Blue Pin อีกครั้งหลังจากเปลี่ยนตําแหน่ง เพื่อรีเซตค่า 🌍 Latitude 📍 Longitude")
