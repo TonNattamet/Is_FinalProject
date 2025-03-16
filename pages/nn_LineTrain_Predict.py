@@ -9,11 +9,11 @@ from geopy.geocoders import Nominatim  # ✅ Fix: Import added
 def show():
 
     # Load trained model
-    model = tf.keras.models.load_model("bangkok_train_nn_final.keras")
+    model = tf.keras.models.load_model("model/bangkok_train_nn_final.keras")
 
     # Load encoders & scalers
-    label_encoder = joblib.load("station_label_encoder_final.pkl")
-    scaler = joblib.load("lat_lng_scaler_final.pkl")
+    label_encoder = joblib.load("model/station_label_encoder_final.pkl")
+    scaler = joblib.load("model/lat_lng_scaler_final.pkl")
 
     # Initialize Geocoder
     geolocator = Nominatim(user_agent="geoapi")  # ✅ Now this works!

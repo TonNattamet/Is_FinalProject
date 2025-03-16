@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
 def load_ml_model():
-    return joblib.load("baked_food_rf_final_v3.pkl")  # Load the final model
+    return joblib.load("model/baked_food_rf_final_v3.pkl")  # Load the final model
 
 # Load trained model
 model = load_ml_model()

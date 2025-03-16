@@ -51,8 +51,8 @@ PAGES = {
     "📊 Introduction": introduction,
     "📖 ML & NN Explanation": explanation,
     "🍜 ML Thai Dish Predictor": ml_ThaiFood,
-    # "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
-    # "🚆 NN Train Line Predictor": nn_LineTrain_Predict
+    "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
+    "🚆 NN Train Line Predictor": nn_LineTrain_Predict
 }
 
 st.sidebar.title("📌 Navigation")
