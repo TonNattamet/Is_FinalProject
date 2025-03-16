@@ -1,42 +1,30 @@
-import joblib
 import streamlit as st
-import numpy as np
-from sklearn.preprocessing import MinMaxScaler
 
-def load_ml_model():
-    return joblib.load("model/baked_food_rf_final_v3.pkl")  # Load the final model
+# Set page config at the start
+st.set_page_config(page_title="Wel", page_icon="🍽️", layout="wide")
 
-# Load trained model
-model = load_ml_model()
+# Sidebar Navigation
+st.sidebar.title("📌 Navigation")
+page = st.sidebar.radio("Select Page", [
+    "Introduction & Data Preparation",
+    "Algorithm & Model Development",
+    "Baked Food Health Classifier",
+    "Thai Dish Predictor"
+])
 
-# Define the MinMaxScaler (must match training range)
-scaler = MinMaxScaler()
-scaler.fit([[50, 0, 0, 0, 0], [600, 50, 100, 100, 30]])  # Adjust min/max range
+# Import respective pages
+if page == "Introduction & Data Preparation":
+    import pages.introduction as intro
+    intro.show()
 
-# UI Enhancements
-st.set_page_config(page_title="Baked Food Health Classifier", page_icon="🍞", layout="centered")
-st.title("🍞 Baked Food Health Classifier")
-st.markdown("### Enter nutritional values to predict if the food is **Healthy** or **Unhealthy**")
+elif page == "Algorithm & Model Development":
+    import pages.nn_test as nn_test
+    nn_test.show()
 
-# Sidebar for additional info
-st.sidebar.header("⚙️ Adjust Model Settings")
-st.sidebar.markdown("Use the sliders below to explore different values.")
+elif page == "Baked Food Health Classifier":
+    import pages.ml_Bakery_Nutrition as ml_Bakerynutrition
+    ml_Bakerynutrition.show()
 
-# User Inputs with sliders
-calories = st.slider("Calories (kcal)", 50, 600, 250)
-protein = st.slider("Protein (g)", 0.0, 50.0, 15.0)
-carbs = st.slider("Carbohydrates (g)", 0.0, 100.0, 30.0)
-sugar = st.slider("Sugar (g)", 0.0, 100.0, 3.0)
-saturated_fat = st.slider("Saturated Fat (g)", 0.0, 30.0, 2.0)
-
-# Make Prediction
-if st.button("🔍 Predict Healthiness"):
-    features = np.array([[calories, protein, carbs, sugar, saturated_fat]])
-    features_scaled = scaler.transform(features)
-    prediction = model.predict(features_scaled)
-    label = "✅ Healthy" if prediction[0] == 1 else "❌ Unhealthy"
-    st.success(f"Predicted Classification: {label}")
-
-# Footer
-st.markdown("---")
-st.markdown("🚀 Developed with Streamlit & Machine Learning")
+elif page == "Thai Dish Predictor":
+    import pages.ml_ThaiFood as ml_ThaiFood
+    ml_ThaiFood.show()
