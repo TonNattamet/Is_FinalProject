@@ -5,7 +5,7 @@ from pages.introduction import show as introduction
 from pages.explanation import show as explanation
 from pages.ml_ThaiFood import show as ml_ThaiFood
 from pages.ml_Bakery_Nutrition import show as ml_Bakery_Nutrition
-from pages.nn_LineTrain_Predict import show as nn_LineTrain_Predict
+from pages.Nn_LineTrain_Predict import show as Nn_LineTrain_Predict
 
 # Sidebar Information
 st.sidebar.header("About Us")
@@ -20,7 +20,7 @@ PAGES = {
     "📖 ML & NN Explanation": explanation,
     "🍜 ML Thai Dish Predictor": ml_ThaiFood,
     "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
-    "🚆 NN Train Line Predictor": nn_LineTrain_Predict
+    "🚆 NN Train Line Predictor": Nn_LineTrain_Predict
 }
 
 st.sidebar.title("📌 Navigation")

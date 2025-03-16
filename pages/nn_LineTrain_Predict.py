@@ -18,8 +18,8 @@ def show():
     # Initialize Geocoder
     geolocator = Nominatim(user_agent="geoapi")  # ✅ Now this works!
 
-    # UI Setup
-    # st.set_page_config(page_title="🚆 Bangkok Train AI", page_icon="🚇", layout="centered")
+    # UI Setupasdasd
+    
     st.title("🚆 Bangkok Train Line Predictor")
     st.markdown("### Select your location on the map or enter an address to predict the nearest train line.")
 
