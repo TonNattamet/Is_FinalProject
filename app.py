@@ -14,18 +14,18 @@ st.sidebar.markdown("**อาจารย์ผู้สอน:** ดร.ณั�
 st.sidebar.markdown("**มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ**")
 st.sidebar.markdown("**ภาควิชาวิทยาการคอมพิวเตอร์และสารสนเทศ**")
 
-# Page Navigation
-PAGES = {
-    "📊 Introduction": introduction,
-    "📖 ML & NN Explanation": explanation,
-    "🍜 ML Thai Dish Predictor": ml_ThaiFood,
-    "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
-    "🚆 NN Train Line Predictor": nn_LineTrain_Predict
-}
+# # Page Navigation
+# PAGES = {
+#     "📊 Introduction": introduction,
+#     "📖 ML & NN Explanation": explanation,
+#     "🍜 ML Thai Dish Predictor": ml_ThaiFood,
+#     "🥐 ML Bakery Health Classifier": ml_Bakery_Nutrition,
+#     "🚆 NN Train Line Predictor": nn_LineTrain_Predict
+# }
 
-st.sidebar.title("📌 Navigation")
-choice = st.sidebar.radio("🔍 Select a Page:", list(PAGES.keys()))
-PAGES[choice]()  # Call the selected page function
+# st.sidebar.title("📌 Navigation")
+# choice = st.sidebar.radio("🔍 Select a Page:", list(PAGES.keys()))
+# PAGES[choice]()  # Call the selected page function
 
 
 
