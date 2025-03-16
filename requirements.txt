@@ -1,21 +1,30 @@
-streamlit
-scipy==1.11.3
-gensim==4.3.2
-tensorflow
+# streamlit
+# scipy==1.11.3
+# gensim==4.3.2
+# tensorflow
+# scikit-learn
+# numpy
+# pandas
+# joblib
+# folium
+# geopy
+# streamlit-folium
+# xgboost
+
+
+
+
+
+
+
+streamlit>=1.26.0
 scikit-learn
-numpy
-pandas
-joblib
+tensorflow
 folium
-geopy
 streamlit-folium
-xgboost
-
-
-
-
-
-
-
+joblib
+numpy
+gensim
+geopy
 
 
