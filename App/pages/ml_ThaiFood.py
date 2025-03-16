@@ -4,9 +4,9 @@ import numpy as np
 from gensim.models import Word2Vec
 
 # Load trained models
-model = joblib.load("thai_dish_model_final.pkl")
-label_encoder = joblib.load("label_encoder.pkl")
-word2vec = Word2Vec.load("word2vec_model.pkl")
+model = joblib.load("model/thai_dish_model_final.pkl")
+label_encoder = joblib.load("model/label_encoder.pkl")
+word2vec = Word2Vec.load("model/word2vec_model.pkl")
 
 def show():
     st.header("🍛 Thai Dish Predictor")
