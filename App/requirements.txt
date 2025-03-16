@@ -3,6 +3,12 @@ pandas
 joblib
 tensorflow
 numpy
+matplotlib
+
+xgboost
+gensim
+
+scikit-learn
 
 
 
