@@ -4,7 +4,7 @@ import streamlit as st
 # Set Page Configuration (MUST be the first Streamlit command)
 st.set_page_config(
     page_title="Welcome",
-    page_icon="🍜",
+    page_icon="😍",
     layout="wide"
 )
 

@@ -18,7 +18,7 @@ def show():
     geolocator = Nominatim(user_agent="geoapi")
 
     # UI Setup
-    st.title("🚆 Bangkok Train Line Predictor")
+    st.title("🚆 Bangkok Train Line Predictor 🚄")
     st.markdown("### Select your location on the map or enter an address to predict the nearest train line.")
     st.markdown("### 🔹 Click on the **Blue Pin** after moving it to refresh latitude & longitude values.")
 
