@@ -15,7 +15,7 @@ st.sidebar.title("Machine Learning & Neural Network Web App")
 page = st.sidebar.radio("Go to", ["Home", "Machine Learning Model", "Neural Network Model", "About the Project"])
 
 if page == "Home":
-    st.title("Welcome to ML & NN Web App")
+    st.title("88888888888888888888888888")
     st.write("This application demonstrates Machine Learning and Neural Network models.")
     st.write("Select a page from the sidebar to explore more.")
 
