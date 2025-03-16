@@ -39,7 +39,7 @@ from pages.ml_ThaiFood import show as ml_ThaiFood
 from pages.ml_Bakery_Nutrition import show as ml_Bakery_Nutrition
 from pages.nn_LineTrain_Predict import show as nn_LineTrain_Predict
 
-Sidebar Information
+# Sidebar Information
 st.sidebar.header("About Us")
 st.sidebar.markdown("**จัดทำโดย:** นายณัฐเมศร์ วงศ์ธนิตเลิศ (ห้อง DE-RA ชั้นปีที่ 4)")
 st.sidebar.markdown("**อาจารย์ผู้สอน:** ดร.ณัฐกิตติ์ จิตรเอื้อตระกูล (NJR)")
