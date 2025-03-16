@@ -30,7 +30,7 @@ def show():
     st.write(", ".join(available_ingredients))
     
     # User Input
-    ingredients_input = st.text_input("Enter Ingredients (e.g., beef+lime juice+fish sauce)", "")
+    ingredients_input = st.text_input("Enter Ingredients (e.g.,1.Pork belly+rice noodles+soy sauce+garlic,2.Green curry paste+coconut milk+meat)", "Yellow curry paste+fish+vegetables")
     
     # Function to Convert Ingredients to Word2Vec Features
     def vectorize_ingredients(ingredients):
