@@ -1,28 +1,15 @@
 streamlit
+scipy==1.10.1
+gensim==4.3.2
+tensorflow==2.19.0
+scikit-learn
+numpy
 pandas
 joblib
-tensorflow
-numpy
-matplotlib
-
-xgboost
-gensim
-
-
+folium
+geopy
 streamlit-folium
-scikit-learn
-
-
-scipy.sparse
-gensim 
-entropy                                        
-get_blas_funcs
-triu                          
-logging                                                          
-get_lapack_funcs 
-
-gensim.models
-gensim
+xgboost
 
 
 
