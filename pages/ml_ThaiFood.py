@@ -12,8 +12,7 @@ def show():
     st.header("🍛 Thai Dish Predictor")
     st.markdown("### Enter ingredients to predict the Thai dish name!")
     
-    # Sidebar for additional info
-    st.sidebar.header("ℹ️ How to Use")
+    # Sidebar for additional info    st.sidebar.header("ℹ️ How to Use")
     st.sidebar.markdown("Enter ingredients separated by `+` (e.g., `beef+lime juice+fish sauce`).")
     st.sidebar.markdown("Click the **Predict Dish** button to get the predicted Thai dish name.")
     st.sidebar.markdown("Enjoy discovering Thai cuisine! 🇹🇭")
